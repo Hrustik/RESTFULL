@@ -1,0 +1,156 @@
+/*
+    Style for responsive design
+*/
+
+@media all and (max-width: 1199px) {}
+
+@media all and (max-width: 991px) {
+    .main {
+        .content {
+            .avatar {
+                height: 250px;
+            }
+            div.title {
+                a.edit-link {
+                    font-size: 1em;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            .profile-wall {
+                li {
+                    .name {
+                        span {
+                            display: block;
+                            float: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .header {
+        position: relative;
+        .logotype {}
+        .relative {
+            position: inherit;
+        }
+        .sidebar-open {
+            display: inline-block;
+            margin-right: 0;
+        }
+        .users-dropdown {
+            position: inherit;
+            button {
+                span {
+                    display: none;
+                }
+                i {
+                    margin: 0;
+                }
+            }
+            .auth-menu {
+                min-width: 100%;
+                input {
+                    margin-bottom: 10px;
+                }
+                .list-users {
+                    li {
+                        a {
+                            span {
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        .item-button {
+                            top: 5px;
+                            button {
+                                display: block;
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .profile-menu {
+            span.name {
+                display: none;
+            }
+        }
+    }
+    .main {
+        .sidebar-container {
+            position: absolute;
+            z-index: 9999;
+            left: -100%;
+            width: 280px;
+            transition: all .2s linear;
+            background: $white;
+            &.open {
+                left: 0;
+            }
+        }
+        .content-container {
+            width: 100%;
+            transition: all .2s linear;
+            &.open {
+                margin-left: 280px;
+            }
+        }
+        .content {
+            .friends-list {
+                li {
+                    a {
+                        &.send-message,
+                        &.add,
+                        &.remove {
+                            span {
+                                display: none;
+                            }
+                            i {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .profile-block {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .footer {
+        margin-top: 50px;
+        text-align: center;
+        height: auto;
+        li {
+            a {
+                padding: 0 5px;
+            }
+            &.logotype {
+                display: block;
+                float: inherit;
+            }
+        }
+    }
+    .welcome {
+        .welcome-head {
+            text-align: center;
+            .welcome-nav {
+                margin: 20px 0;
+            }
+            .auth-link {
+                text-align: center;
+            }
+        }
+        .welcome-content {
+            margin-top: 100px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+/*
+    General styles
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+    color: $placeholder;
+}
+
+::-moz-placeholder {
+    color: $placeholder;
+}
+
+:-ms-input-placeholder {
+    color: $placeholder;
+}
+
+:-moz-placeholder {
+    color: $placeholder;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background: $white;
+    height: 100%;
+}
+
+.btn-primary {
+    border-color: $grey;
+    background: $grey;
+}
+
+.photo {
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+    &.photo-40 {
+        width: 40px;
+        padding-top: 40px;
+    }
+    &.photo-50 {
+        width: 50px;
+        padding-top: 50px;
+    }
+}

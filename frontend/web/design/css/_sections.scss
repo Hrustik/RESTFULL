@@ -1,0 +1,568 @@
+/*
+    Section and block styles
+*/
+
+.header {
+    background: $grey;
+    .logotype,
+    .sidebar-open,
+    .users-dropdown,
+    .profile-menu {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .logotype {
+        margin: 6px 0;
+    }
+    .sidebar-open {
+        font-size: 1.5em;
+        line-height: 50px;
+        display: none;
+        margin-right: 5px;
+        cursor: pointer;
+        color: $white;
+    }
+    .users-dropdown {
+        > button {
+            font-weight: 300;
+            line-height: 50px;
+            padding: 0 10px;
+            color: $white;
+            border: none;
+            background: none;
+            i {
+                font-size: 1.5em;
+                margin-right: 5px;
+            }
+        }
+        .auth-menu {
+            min-width: 470px;
+            margin: 0;
+            padding: 15px;
+            border: none;
+            border-radius: 0;
+            .list-users {
+                overflow-y: auto;
+                max-height: calc(80px * 5);
+                li {
+                    position: relative;
+                    border-bottom: 1px solid $light;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        padding: 15px 0;
+                        span {
+                            margin: 0 10px;
+                            color: $text;
+                        }
+                    }
+                    .item-button {
+                        position: absolute;
+                        top: 25px;
+                        right: 10px;
+                        display: inline-block;
+                        button {
+                            line-height: normal;
+                            display: inline-block;
+                            height: 28px;
+                            padding: 3px 3px 3px 6px;
+                            padding: 0 5px;
+                            text-align: center;
+                            vertical-align: middle;
+                            color: $white;
+                            border: 1px solid $grey;
+                            background: $grey;
+                        }
+                    }
+                }
+            }
+        }
+        &.open {
+            > button {
+                background: rgba(255, 255, 255, .1);
+            }
+        }
+    }
+    .profile-menu {
+        float: right;
+        .photo {
+            margin: 5px 10px;
+        }
+    }
+    a {
+        font-size: .9em;
+        font-weight: 300;
+        color: $white;
+        &.logout-link {
+            color: $dark-link;
+        }
+    }
+}
+
+.main {
+    overflow: hidden;
+    min-height: calc(100% - 180px);
+    margin-top: 10px;
+    .sidebar {
+        .block {
+            font-size: .9em;
+            margin-bottom: 10px;
+            color: #a3a7b2;
+            border: 1px solid $light;
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .04);
+            li {
+                padding: 0 15px;
+                &:hover,
+                &.active {
+                    background: $light;
+                    a {
+                        color: $grey;
+                    }
+                }
+                a {
+                    display: block;
+                    padding: 15px 0;
+                    color: #a3a7b2;
+                    border-bottom: 1px solid $light;
+                }
+            }
+            .title {
+                padding: 15px;
+                color: $grey;
+                background: $light;
+            }
+            p {
+                padding: 15px;
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .content {
+        font-size: .9em;
+        color: $text;
+        div.title {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid $light;
+            .status {
+                font-size: .8em;
+                position: relative;
+                top: -5px;
+                &.online {
+                    color: green;
+                }
+                &.offline {
+                    color: red;
+                }
+            }
+            a.edit-link {
+                font-size: .8em;
+                float: right;
+            }
+        }
+        .list {
+            padding: 15px 0;
+            border-top: 1px solid $light;
+            border-bottom: 1px solid $light;
+            .title {
+                font-weight: bold;
+                padding: 10px 0;
+            }
+        }
+        .bonus-balance {
+            font-size: 1.1em;
+            text-align: center;
+            > div {
+                margin-bottom: 30px;
+            }
+        }
+        .table {
+            margin: 15px 0;
+        }
+        h4 {
+            font-weight: normal;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .bonus-form {
+            margin-bottom: 15px;
+            span {
+                display: block;
+                padding: 10px 0;
+            }
+        }
+        .ref-user-block {
+            .title {
+                font-size: 1.1em;
+                display: block;
+                margin: 15px 0 10px;
+                border: none;
+            }
+        }
+        .referal-list {
+            display: inline-block;
+            li {
+                display: inline-block;
+                margin: 0 10px 0 0;
+            }
+        }
+        .team-list {
+            text-align: center;
+            span {
+                display: block;
+            }
+            .photo {
+                margin: 15px 0;
+            }
+        }
+        .friends-list {
+            li {
+                padding: 15px 0;
+                small {
+                    display: block;
+                    padding: 15px;
+                    text-align: center;
+                    color: $placeholder;
+                }
+                a {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    display: block;
+                    &.send-message,
+                    &.add,
+                    &.remove {
+                        font-size: 1em;
+                        font-weight: normal;
+                        margin-top: 15px;
+                        i {
+                            font-size: 1.4em;
+                            display: none;
+                        }
+                    }
+                    &.add {
+                        font-size: .8em;
+                        margin-bottom: 10px;
+                        padding: 6px;
+                        text-align: center;
+                        color: $white;
+                        background: $grey;
+                    }
+                    &.remove {
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+                &.right-content {
+                    text-align: right;
+                    background: #fbfbfb;
+                }
+            }
+        }
+        .message-list {
+            li {
+                border-bottom: 1px solid $light;
+                &:hover {
+                    background: #fbfbfb;
+                }
+            }
+        }
+        .message-item-list {
+            overflow-y: auto;
+            li {
+                padding: 30px 15px;
+            }
+        }
+        .write-form {
+            overflow: hidden;
+            textarea {
+                width: 100%;
+                padding: 15px;
+            }
+            button {
+                float: right;
+            }
+        }
+        > small {
+            display: block;
+            padding: 15px 0;
+            color: $placeholder;
+        }
+        form {
+            margin: 30px 0;
+        }
+        .profile-list {
+            margin-bottom: 30px;
+            li {
+                padding: 8px 0;
+                &.title {
+                    font-weight: bold;
+                    margin-top: 10px;
+                    border-top: 1px solid $light;
+                }
+                .subscribe {
+                    font-size: .8em;
+                    float: right;
+                    padding: 3px 5px;
+                    cursor: pointer;
+                    color: $white;
+                    border-radius: 2px;
+                    background: $grey;
+                    &.off {
+                        background: $dark-link;
+                    }
+                }
+            }
+        }
+        .avatar {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .edit-avatar {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            text-align: center;
+            color: $white;
+            background: $grey;
+        }
+        .subscribe-days {
+            text-align: center;
+            padding: 20px 0 10px;
+            p {
+                margin: 10px 0 0;
+                span {
+                    font-size: 2em;
+                }
+            }
+        }
+        .referal-link {
+            padding: 20px 0;
+            text-align: center;
+            b {
+                display: block;
+                margin-bottom: 15px;
+            }
+            .form-control {
+                height: auto;
+            }
+        }
+        .add-friend {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid $grey;
+        }
+        .profile-block {
+            font-size: .9em;
+            margin-bottom: 10px;
+            color: #a3a7b2;
+            border: 1px solid $light;
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .04);
+            .head {
+                padding: 5px;
+                border-bottom: 1px solid $light;
+                a {
+                    float: right;
+                    padding: 0;
+                }
+            }
+            a {
+                display: block;
+                padding: 15px 10px;
+                text-align: center;
+                .photo {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .profile-wall {
+            form {
+                overflow: hidden;
+                textarea {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 15px;
+                }
+                button {
+                    float: right;
+                }
+            }
+            small {
+                display: block;
+                margin: 10px 0;
+                color: $placeholder;
+            }
+            li {
+                padding: 15px 0;
+                border-bottom: 1px solid $light;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+                .name {
+                    overflow: hidden;
+                    a {
+                        font-weight: bold;
+                    }
+                    span {
+                        font-size: .8em;
+                        float: right;
+                    }
+                }
+                .links {
+                    text-align: right;
+                    a {
+                        margin: 5px;
+                    }
+                }
+                .comment-reply {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .setting-photo {
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 10px;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.footer {
+    height: 80px;
+    margin-top: 40px;
+    background: $dark;
+    li {
+        display: inline-block;
+        padding: 30px 0;
+        a {
+            font-size: .9em;
+            padding: 0 15px;
+            color: $dark-link;
+        }
+        &.logotype {
+            float: right;
+            padding: 18px 0;
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.welcome {
+    height: auto;
+    min-height: 100%;
+    background: url(../img/bg.jpg) no-repeat 50% 0;
+    background-attachment: fixed;
+    background-size: cover;
+    .welcome-head {
+        padding: 10px 0;
+        a {
+            color: $white;
+        }
+        .logotype {
+            img {
+                height: 50px;
+            }
+        }
+        .welcome-nav {
+            text-align: center;
+            li {
+                display: inline-block;
+                a {
+                    line-height: 50px;
+                    display: block;
+                    padding: 0 10px;
+                    &:hover {
+                        box-shadow: inset 0 -3px 0 0 $green;
+                    }
+                }
+            }
+        }
+        .auth-link {
+            text-align: right;
+            a {
+                line-height: 50px;
+                display: inline-block;
+                padding: 0 10px;
+                &.register {
+                    line-height: 40px;
+                    margin: 5px 0;
+                    border: 1px solid $white;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    .welcome-content {
+        margin-top: 200px;
+        text-align: center;
+        img {
+            max-width: 300px;
+        }
+        .text {
+            font-size: 1.8em;
+            color: $white;
+            span {
+                font-size: 1.5em;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: $green;
+            }
+            small {
+                font-size: .5em;
+                font-weight: 300;
+                display: block;
+                margin: 15px 0;
+            }
+            a {
+                font-size: .6em;
+                display: block;
+                margin: 30px 0;
+                text-decoration: underline;
+                color: $green;
+            }
+        }
+        .icon-list {
+            margin-top: 50px;
+            li {
+                font-size: .7em;
+                font-weight: 300;
+                display: inline-block;
+                margin: 10px;
+                text-transform: uppercase;
+                color: $white;
+                img {
+                    display: block;
+                    margin: 0 auto 15px;
+                }
+            }
+        }
+    }
+}
